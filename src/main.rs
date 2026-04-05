@@ -3,6 +3,7 @@ mod p0001_multiples_of_3_or_5;
 mod p0002_even_fibonacci_numbers;
 mod p0007_10001st_prime;
 mod p0025_1000_digit_fibonacci_number;
+mod p0112_bouncy_numbers;
 
 use std::env;
 use std::time::Instant;
@@ -31,6 +32,11 @@ fn main() {
         }
         Some("25")=> {
             let result: u64 = p0025_1000_digit_fibonacci_number::fibonacci_force();
+            println!("Anser: {:?}", result);
+        }
+        Some("112")=> {
+            let percentage: u8 = 99;
+            let result: u32 = p0112_bouncy_numbers::bouncy_numbers(percentage);
             println!("Anser: {:?}", result);
         }
         _ => {
