@@ -1,6 +1,7 @@
 mod p0000_perfect_square;
 mod p0001_multiples_of_3_or_5;
 mod p0002_even_fibonacci_numbers;
+mod p0007_10001st_prime;
 mod p0025_1000_digit_fibonacci_number;
 
 use std::env;
@@ -21,6 +22,11 @@ fn main() {
         }
         Some("2")=> {
             let result: u64 = p0002_even_fibonacci_numbers::fibonacci_force();
+            println!("Anser: {:?}", result);
+        }
+        Some("7")=> {
+            let n:u32 = 1;
+            let result: u64 = p0007_10001st_prime::prime_sieve(n);
             println!("Anser: {:?}", result);
         }
         Some("25")=> {
