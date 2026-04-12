@@ -8,6 +8,13 @@ pub fn bouncy_numbers(percentage:u8) -> u32 {
         if x > 100 && !check_increasing(x) && !check_decreasing(x) {
             bouncy += 1;
         }
+
+        /* Avoid floating point entirely. Compare integers:
+
+        if bouncy * 100 >= x * (percentage as u32) {
+            return x;
+        } */
+
         if (bouncy as f64) / (x as f64)>=0.99 {
             //println!("{}", x);
             return x;
