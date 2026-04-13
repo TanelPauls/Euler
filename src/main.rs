@@ -5,6 +5,7 @@ mod p0004_largest_palindrome_product;
 mod p0007_10001st_prime;
 mod p0018_maximum_path_sum_1;
 mod p0025_1000_digit_fibonacci_number;
+mod p0054_poker_hands;
 mod p0067_maximum_path_sum_2;
 mod p0092_square_digit_chains;
 mod p0112_bouncy_numbers;
@@ -44,6 +45,10 @@ fn main() {
         }
         Some("25")=> {
             let result: u64 = p0025_1000_digit_fibonacci_number::fibonacci_force();
+            println!("Anser: {:?}", result);
+        }
+        Some("54")=> {
+            let result: u32 = p0054_poker_hands::poker_hands();
             println!("Anser: {:?}", result);
         }
         Some("67")=> {
