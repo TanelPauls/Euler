@@ -1,6 +1,5 @@
-pub fn prime_sieve(n: u32) -> u64 {
+pub fn prime_sieve() -> u64 {
 
-    let mut answer = 0;
     // upper bound for nth prime = n(ln n + ln ln n)
     let s = sieve_of_eratosthenes(110000);
 

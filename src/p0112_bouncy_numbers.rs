@@ -1,6 +1,6 @@
-pub fn bouncy_numbers(percentage:u8) -> u32 {
+pub fn bouncy_numbers(_percentage:u8) -> u32 {
 
-    let mut answer= 0;
+    let answer= 0;
     let mut bouncy = 0;
 
 

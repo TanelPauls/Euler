@@ -5,6 +5,7 @@ mod p0004_largest_palindrome_product;
 mod p0007_10001st_prime;
 mod p0018_maximum_path_sum_1;
 mod p0025_1000_digit_fibonacci_number;
+mod p0033_digit_cancelling_fractions;
 mod p0054_poker_hands;
 mod p0067_maximum_path_sum_2;
 mod p0092_square_digit_chains;
@@ -35,8 +36,7 @@ fn main() {
             println!("Anser: {:?}", result);
         }
         Some("7")=> {
-            let n:u32 = 1;
-            let result: u64 = p0007_10001st_prime::prime_sieve(n);
+            let result: u64 = p0007_10001st_prime::prime_sieve();
             println!("Anser: {:?}", result);
         }
         Some("18")=> {
@@ -45,6 +45,10 @@ fn main() {
         }
         Some("25")=> {
             let result: u64 = p0025_1000_digit_fibonacci_number::fibonacci_force();
+            println!("Anser: {:?}", result);
+        }
+        Some("33")=> {
+            let result: i32 = p0033_digit_cancelling_fractions::digit_cancelling_fraction();
             println!("Anser: {:?}", result);
         }
         Some("54")=> {
