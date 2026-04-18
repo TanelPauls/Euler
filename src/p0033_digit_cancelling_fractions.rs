@@ -1,4 +1,41 @@
+fn gcd(mut a: i32, mut b: i32) -> i32 {
+    while b != 0 {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    a
+}
+
 pub fn digit_cancelling_fraction() -> i32 {
+    let mut num_product = 1;
+    let mut den_product = 1;
+
+    for a in 1..10 {
+        for b in 1..10 {
+            for d in 1..10 {
+                let numerator = 10 * a + b;
+                let denominator = 10 * b + d;
+
+                if numerator >= denominator {
+                    continue;
+                }
+
+                // check "digit cancelling"
+                if numerator * d == denominator * a {
+                    num_product *= numerator;
+                    den_product *= denominator;
+                }
+            }
+        }
+    }
+
+    let g = gcd(num_product, den_product);
+    den_product / g
+    // Execution time: 63.277µs
+}
+
+/* pub fn digit_cancelling_fraction() -> i32 {
     let mut a;
     let mut b;
     let mut c;
@@ -42,4 +79,4 @@ pub fn digit_cancelling_fraction() -> i32 {
     println!("{:?}", values);
     5
     // Execution time: 198.609µs
-}
+} */
